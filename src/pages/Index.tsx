@@ -9,7 +9,6 @@ const Index = () => {
       <Navigation />
       <main>
         <HeroSection />
-        <ServicesSection />
       </main>
       <WhatsAppButton />
     </div>

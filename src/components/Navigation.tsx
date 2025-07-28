@@ -1,18 +1,22 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Blog", href: "#blog" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
   ];
+
+  const isActive = (href: string) => location.pathname === href;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -32,18 +36,21 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group"
+                to={item.href}
+                className={`font-medium relative group transition-colors duration-300 ${
+                  isActive(item.href) 
+                    ? 'text-primary' 
+                    : 'text-foreground hover:text-primary'
+                }`}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></span>
-              </a>
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-primary transition-all duration-300 ${
+                  isActive(item.href) ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
+              </Link>
             ))}
-            <Button variant="luxury" size="sm">
-              Get Quote
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -63,20 +70,19 @@ const Navigation = () => {
           <div className="md:hidden py-6 border-t border-border animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                  to={item.href}
+                  className={`font-medium py-2 transition-colors duration-300 ${
+                    isActive(item.href) 
+                      ? 'text-primary' 
+                      : 'text-foreground hover:text-primary'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
-              <div className="pt-4">
-                <Button variant="luxury" className="w-full">
-                  Get Quote
-                </Button>
-              </div>
             </div>
           </div>
         )}
