@@ -2,41 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Luxury Portfolio Design System - Sophisticated & Premium */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Luxury Dark Theme */
+    --background: 222 47% 4%;
+    --foreground: 45 100% 96%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Premium Cards */
+    --card: 222 47% 6%;
+    --card-foreground: 45 100% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Elegant Popovers */
+    --popover: 222 47% 8%;
+    --popover-foreground: 45 100% 96%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Gold Luxury Primary */
+    --primary: 45 93% 58%;
+    --primary-foreground: 222 47% 4%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Sophisticated Secondary */
+    --secondary: 222 47% 12%;
+    --secondary-foreground: 45 100% 96%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Subtle Muted */
+    --muted: 222 47% 8%;
+    --muted-foreground: 45 30% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Premium Accent */
+    --accent: 45 93% 58%;
+    --accent-foreground: 222 47% 4%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Elegant Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 100% 96%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Refined Borders */
+    --border: 222 47% 12%;
+    --input: 222 47% 12%;
+    --ring: 45 93% 58%;
 
-    --radius: 0.5rem;
+    /* Luxury Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(45 93% 58%), hsl(38 92% 50%));
+    --gradient-dark: linear-gradient(135deg, hsl(222 47% 4%), hsl(222 47% 8%));
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 6% / 0.8), hsl(222 47% 10% / 0.8));
+    
+    /* Premium Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(222 47% 4% / 0.8);
+    --shadow-gold: 0 20px 40px -8px hsl(45 93% 58% / 0.2);
+    --shadow-elegant: 0 10px 30px -10px hsl(222 47% 4% / 0.6);
+
+    /* Smooth Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
