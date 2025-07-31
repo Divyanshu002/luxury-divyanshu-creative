@@ -194,28 +194,41 @@ const Blog = () => {
           ))}
         </div>
 
-        {/* Newsletter Signup */}
+        {/* My Workflow */}
         <div className="text-center mt-16 animate-fade-in">
           <div className="bg-gradient-card backdrop-blur-sm p-8 rounded-2xl border border-primary/20 shadow-elegant">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Stay Updated
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              My Workflow Process
             </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Subscribe to my newsletter and get the latest insights on web development, design trends, 
-              and digital marketing strategies delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-background border border-primary/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-              />
-              <Button 
-                variant="luxury"
-                onClick={() => alert('Newsletter subscription coming soon!')}
-              >
-                Subscribe
-              </Button>
+            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="text-center space-y-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
+                  <span className="text-primary font-bold">1</span>
+                </div>
+                <h4 className="font-semibold text-foreground">Discovery</h4>
+                <p className="text-sm text-muted-foreground">Understanding your goals and requirements</p>
+              </div>
+              <div className="text-center space-y-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
+                  <span className="text-primary font-bold">2</span>
+                </div>
+                <h4 className="font-semibold text-foreground">Planning</h4>
+                <p className="text-sm text-muted-foreground">Creating strategy and project roadmap</p>
+              </div>
+              <div className="text-center space-y-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
+                  <span className="text-primary font-bold">3</span>
+                </div>
+                <h4 className="font-semibold text-foreground">Development</h4>
+                <p className="text-sm text-muted-foreground">Building with modern tools and best practices</p>
+              </div>
+              <div className="text-center space-y-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
+                  <span className="text-primary font-bold">4</span>
+                </div>
+                <h4 className="font-semibold text-foreground">Delivery</h4>
+                <p className="text-sm text-muted-foreground">Testing, deployment, and ongoing support</p>
+              </div>
             </div>
           </div>
         </div>
