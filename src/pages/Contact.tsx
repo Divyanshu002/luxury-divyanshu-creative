@@ -136,16 +136,6 @@ const Contact = () => {
                     </select>
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Project Budget (₹)</label>
-                    <select className="w-full px-3 py-2 bg-background/50 border border-primary/20 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 text-foreground">
-                      <option value="">Select budget range</option>
-                      <option value="5000-15000">₹5,000 - ₹15,000</option>
-                      <option value="15000-50000">₹15,000 - ₹50,000</option>
-                      <option value="50000-100000">₹50,000 - ₹1,00,000</option>
-                      <option value="100000+">₹1,00,000+</option>
-                    </select>
-                  </div>
 
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Message</label>

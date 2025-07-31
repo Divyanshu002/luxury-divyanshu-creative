@@ -63,7 +63,7 @@ const Blog = () => {
     }
   ];
 
-  const categories = ["All", "Web Development", "UI/UX Design", "Branding", "Digital Marketing", "Security", "Design"];
+  
 
   return (
     <>
@@ -84,18 +84,6 @@ const Blog = () => {
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in">
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant="secondary"
-              className="hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-            >
-              {category}
-            </Button>
-          ))}
-        </div>
 
         {/* Featured Post */}
         <div className="mb-16 animate-fade-in">
