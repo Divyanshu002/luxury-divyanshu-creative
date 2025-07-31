@@ -13,6 +13,8 @@ import {
   Instagram,
   Github
 } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -55,7 +57,9 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-background pt-20">
       <div className="container mx-auto px-6 py-12">
         {/* Header */}
         <div className="text-center space-y-6 mb-16 animate-fade-in">
@@ -240,6 +244,8 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    <WhatsAppButton />
+    </>
   );
 };
 

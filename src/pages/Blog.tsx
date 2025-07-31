@@ -2,6 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight, Eye } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Blog = () => {
   const blogPosts = [
@@ -64,7 +66,9 @@ const Blog = () => {
   const categories = ["All", "Web Development", "UI/UX Design", "Branding", "Digital Marketing", "Security", "Design"];
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-background pt-20">
       <div className="container mx-auto px-6 py-12">
         {/* Header */}
         <div className="text-center space-y-6 mb-16 animate-fade-in">
@@ -126,7 +130,11 @@ const Blog = () => {
                       {blogPosts[0].views} views
                     </div>
                   </div>
-                  <Button variant="luxury" className="w-fit group">
+                  <Button 
+                    variant="luxury" 
+                    className="w-fit group"
+                    onClick={() => window.open('#', '_blank')}
+                  >
                     Read Full Article
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -183,7 +191,12 @@ const Blog = () => {
                     <Eye className="h-4 w-4" />
                     {post.views} views
                   </div>
-                  <Button variant="premium" size="sm" className="group">
+                  <Button 
+                    variant="premium" 
+                    size="sm" 
+                    className="group"
+                    onClick={() => window.open('#', '_blank')}
+                  >
                     Read More
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -209,7 +222,10 @@ const Blog = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-background border border-primary/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
               />
-              <Button variant="luxury">
+              <Button 
+                variant="luxury"
+                onClick={() => alert('Newsletter subscription coming soon!')}
+              >
                 Subscribe
               </Button>
             </div>
@@ -217,6 +233,8 @@ const Blog = () => {
         </div>
       </div>
     </div>
+    <WhatsAppButton />
+    </>
   );
 };
 

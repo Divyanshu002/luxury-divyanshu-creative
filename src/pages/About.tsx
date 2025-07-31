@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Briefcase, Award, Code2 } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const About = () => {
   const skills = [
@@ -39,7 +41,9 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-background pt-20">
       <div className="container mx-auto px-6 py-12">
         {/* Header */}
         <div className="text-center space-y-6 mb-16 animate-fade-in">
@@ -176,6 +180,8 @@ const About = () => {
         </div>
       </div>
     </div>
+    <WhatsAppButton />
+    </>
   );
 };
 

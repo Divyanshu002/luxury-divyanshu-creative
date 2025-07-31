@@ -1,8 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, MessageCircle } from "lucide-react";
 import heroPortrait from "@/assets/hero-portrait.jpg";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleDownloadResume = () => {
+    // Replace with your actual resume URL
+    window.open('/resume.pdf', '_blank');
+  };
+
+  const handleViewWork = () => {
+    navigate('/portfolio');
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
       {/* Background Pattern */}
@@ -52,12 +64,21 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Button variant="cta" className="group text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6">
+              <Button 
+                variant="cta" 
+                className="group text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6"
+                onClick={handleViewWork}
+              >
                 View My Work
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button variant="premium" size="lg" className="group text-sm sm:text-base">
+              <Button 
+                variant="premium" 
+                size="lg" 
+                className="group text-sm sm:text-base"
+                onClick={handleDownloadResume}
+              >
                 <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Download Resume
               </Button>

@@ -2,6 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Portfolio = () => {
   const projects = [
@@ -58,7 +60,9 @@ const Portfolio = () => {
   const categories = ["All", "Web Development", "UI/UX Design", "Branding", "Digital Marketing"];
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-background pt-20">
       <div className="container mx-auto px-6 py-12">
         {/* Header */}
         <div className="text-center space-y-6 mb-16 animate-fade-in">
@@ -132,11 +136,21 @@ const Portfolio = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  <Button variant="premium" size="sm" className="flex-1 group">
+                  <Button 
+                    variant="premium" 
+                    size="sm" 
+                    className="flex-1 group"
+                    onClick={() => window.open('#', '_blank')}
+                  >
                     <ExternalLink className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     View Live
                   </Button>
-                  <Button variant="ghost" size="sm" className="border border-primary/20">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="border border-primary/20"
+                    onClick={() => window.open('#', '_blank')}
+                  >
                     <Github className="h-4 w-4" />
                   </Button>
                 </div>
@@ -166,6 +180,8 @@ const Portfolio = () => {
         </div>
       </div>
     </div>
+    <WhatsAppButton />
+    </>
   );
 };
 
