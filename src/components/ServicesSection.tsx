@@ -152,6 +152,111 @@ const ServicesSection = () => {
           ))}
         </div>
 
+        {/* Professional Workflow Process */}
+        <div className="mt-24 mb-16">
+          <div className="text-center space-y-6 mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-card/50 backdrop-blur-sm rounded-full border border-primary/20">
+              <span className="text-primary text-sm font-medium">⚡ My Process</span>
+            </div>
+            
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
+              Professional{" "}
+              <span className="bg-gradient-primary bg-clip-text text-transparent">
+                Workflow Process
+              </span>
+            </h2>
+            
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              A systematic approach to deliver exceptional results. Each project follows a proven methodology 
+              ensuring quality, timely delivery, and client satisfaction at every step.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { 
+                step: "01", 
+                title: "Discovery & Research", 
+                description: "Comprehensive analysis of your business goals, target audience, and market competition. We dive deep into understanding your vision and requirements.",
+                icon: "🔍",
+                duration: "2-3 Days",
+                deliverables: ["Project Brief", "Market Analysis", "Technical Specifications"]
+              },
+              { 
+                step: "02", 
+                title: "Strategy & Planning", 
+                description: "Detailed project roadmap with timelines, milestones, and resource allocation. Creating wireframes and system architecture for optimal results.",
+                icon: "📋",
+                duration: "3-5 Days", 
+                deliverables: ["Project Timeline", "Wireframes", "Technical Architecture"]
+              },
+              { 
+                step: "03", 
+                title: "Design & Prototyping", 
+                description: "Crafting pixel-perfect designs with focus on user experience and brand consistency. Interactive prototypes for better visualization and feedback.",
+                icon: "🎨",
+                duration: "5-7 Days",
+                deliverables: ["UI/UX Designs", "Interactive Prototype", "Design System"]
+              },
+              { 
+                step: "04", 
+                title: "Development & Testing", 
+                description: "Clean, scalable code development with regular testing and quality assurance. Continuous integration and deployment for seamless delivery.",
+                icon: "⚙️",
+                duration: "10-15 Days",
+                deliverables: ["Fully Functional Product", "Testing Reports", "Documentation"]
+              },
+            ].map((phase, index) => (
+              <Card 
+                key={phase.step} 
+                className="relative group hover:shadow-luxury transition-all duration-500 hover:-translate-y-2 border-primary/20 bg-gradient-card backdrop-blur-sm"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-4xl">{phase.icon}</div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-primary">{phase.step}</div>
+                      <div className="text-xs text-muted-foreground">{phase.duration}</div>
+                    </div>
+                  </div>
+                  
+                  <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    {phase.title}
+                  </CardTitle>
+                  
+                  <CardDescription className="text-muted-foreground">
+                    {phase.description}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">Key Deliverables:</h4>
+                    <ul className="space-y-1">
+                      {phase.deliverables.map((deliverable) => (
+                        <li key={deliverable} className="flex items-center text-sm text-muted-foreground">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                          {deliverable}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="bg-gradient-card backdrop-blur-sm p-6 rounded-xl border border-primary/20">
+              <p className="text-foreground font-semibold mb-2">🚀 Ready to Start Your Project?</p>
+              <p className="text-muted-foreground text-sm">
+                Every step is designed to ensure your project's success. Let's discuss how this process can work for your specific needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom CTA */}
         <div className="text-center mt-16 animate-fade-in">
           <div className="bg-gradient-card backdrop-blur-sm p-8 rounded-2xl border border-primary/20 shadow-elegant">

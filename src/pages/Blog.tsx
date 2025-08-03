@@ -194,44 +194,6 @@ const Blog = () => {
           ))}
         </div>
 
-        {/* My Workflow */}
-        <div className="text-center mt-16 animate-fade-in">
-          <div className="bg-gradient-card backdrop-blur-sm p-8 rounded-2xl border border-primary/20 shadow-elegant">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
-              My Workflow Process
-            </h3>
-            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="text-center space-y-3">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-primary font-bold">1</span>
-                </div>
-                <h4 className="font-semibold text-foreground">Discovery</h4>
-                <p className="text-sm text-muted-foreground">Understanding your goals and requirements</p>
-              </div>
-              <div className="text-center space-y-3">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-primary font-bold">2</span>
-                </div>
-                <h4 className="font-semibold text-foreground">Planning</h4>
-                <p className="text-sm text-muted-foreground">Creating strategy and project roadmap</p>
-              </div>
-              <div className="text-center space-y-3">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-primary font-bold">3</span>
-                </div>
-                <h4 className="font-semibold text-foreground">Development</h4>
-                <p className="text-sm text-muted-foreground">Building with modern tools and best practices</p>
-              </div>
-              <div className="text-center space-y-3">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-primary font-bold">4</span>
-                </div>
-                <h4 className="font-semibold text-foreground">Delivery</h4>
-                <p className="text-sm text-muted-foreground">Testing, deployment, and ongoing support</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <WhatsAppButton />
