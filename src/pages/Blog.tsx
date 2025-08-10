@@ -121,7 +121,7 @@ const Blog = () => {
                   <Button 
                     variant="luxury" 
                     className="w-fit group"
-                    onClick={() => window.open('#', '_blank')}
+                    onClick={() => window.open('https://blogger.com/blog-post-1', '_blank')}
                   >
                     Read Full Article
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -183,7 +183,7 @@ const Blog = () => {
                     variant="premium" 
                     size="sm" 
                     className="group"
-                    onClick={() => window.open('#', '_blank')}
+                    onClick={() => window.open(`https://blogger.com/blog-post-${index + 2}`, '_blank')}
                   >
                     Read More
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

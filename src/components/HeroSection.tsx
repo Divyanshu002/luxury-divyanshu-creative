@@ -105,13 +105,13 @@ const HeroSection = () => {
 
           {/* Hero Image */}
           <div className="flex justify-center animate-scale-in order-first lg:order-last">
-            <div className="relative max-w-md lg:max-w-none">
+            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
               <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-3xl opacity-20 animate-glow"></div>
-              <div className="relative bg-card/30 backdrop-blur-sm p-4 sm:p-6 rounded-3xl border border-primary/20 shadow-luxury">
+              <div className="relative bg-card/30 backdrop-blur-sm p-3 sm:p-4 lg:p-6 rounded-3xl border border-primary/20 shadow-luxury">
                 <img
                   src={heroPortrait}
                   alt="Divyanshu - Digital Solutions Expert"
-                  className="w-full h-64 sm:h-80 lg:h-[500px] object-cover rounded-2xl"
+                  className="w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[500px] object-cover object-center rounded-2xl"
                 />
               </div>
             </div>

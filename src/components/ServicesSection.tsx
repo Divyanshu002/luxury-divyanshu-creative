@@ -10,6 +10,7 @@ import {
   ArrowRight,
   IndianRupee
 } from "lucide-react";
+import ReviewsSection from "./ReviewsSection";
 
 const ServicesSection = () => {
   const services = [
@@ -256,6 +257,9 @@ const ServicesSection = () => {
             </div>
           </div>
         </div>
+
+        {/* Reviews Section */}
+        <ReviewsSection />
 
         {/* Bottom CTA */}
         <div className="text-center mt-16 animate-fade-in">
